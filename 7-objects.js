@@ -36,7 +36,7 @@ pet = {
 console.log(pet.petFood());
 
 // Activity 5
-coffeShop = {
+const coffeShop = {
     branch: "Quina",
     expresso: 2.20,
     latte: 3.00,
@@ -59,3 +59,28 @@ coffeShop = {
     }
 };
 console.log(`Your order is ${coffeShop.drinksOrdered()} and ${coffeShop.foodOrdered()}. The total cost is £${coffeShop.totalCost().toFixed(2)}`)
+
+// Activity 5 - solved differently
+const coffeePlace = {
+    branch: "Local Caffe",
+    drinks: ["Coffee", "Tea", "Juice",],
+    food: ["Sandwich", "Cake", "Cookie",],
+    prices: [4.00, 3.50, 3.00, 2.20, 1,80],
+    drinkOrdered: true,
+    foodOrdered: true,
+    order() {
+        if (this.drinkOrdered == true && this.foodOrdered == true){
+            return (`You've ordered ${coffeePlace.drinks[0]} at £${coffeePlace.prices[3].toFixed(2)} and ${coffeePlace.food[1]} at £${coffeePlace.prices[2].toFixed(2)}. Your total comes to £${(coffeePlace.prices[3] + coffeePlace.prices[2]).toFixed(2)}. Thank you.`)
+        }
+        else if (this.drinkOrdered == true && this.foodOrdered == false){
+            return (`You've ordered a ${coffeePlace.drinks[2]} at £${coffeePlace.prices[1].toFixed(2)}, would you like to order some food?`)
+        }
+        else if (this.drinkOrdered == false && this.foodOrdered == true){
+            return(`You've ordered ${coffeePlace.food[2]} at £${coffeePlace.prices[4].toFixed(2)}. Would you like to order a drink?`)
+        }
+        else(this.drinkOrdered == false && this.foodOrdered == false);{
+            return (`Welcome to ${coffeePlace.branch}. What would you like to order?`)
+        }
+    }
+}
+console.log(coffeePlace.order())

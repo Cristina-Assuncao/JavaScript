@@ -24,6 +24,6 @@ console.log(daysLeft);
 console.log(`In ${daysLeft} days you will be ${myAge} years old!`);
 
 // Activity 4 - part 2
- 
+
 const myDays = Math.ceil((thisYearBirthday - myBirthday)/oneDay);
 console.log(`Right now I am ${myDays} days old!!!`);
