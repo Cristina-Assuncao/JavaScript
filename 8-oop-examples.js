@@ -32,7 +32,7 @@ class Student {
         }
     }
 };
-// Instances - objects
+// Instances - objects of the class Student
 const megan = new Student("Megan", "Green", "Wednesday")
 const kate = new Student("Kate", "Brown","Sunday")
 const elliot = new Student("Elliot", "Blue", "Saturday")
@@ -55,10 +55,10 @@ class Pet {
         this.colour = colour;
         this.lastFed = time;
     }
-    get petInfo () {            // getter
+    get petInfo () {  // getter
         return `${this.firstname} is a ${this.type}, ${this.age} year(s) old`;
     }
-    set fullName (name) {       // setter
+    set fullName (name) { // setter
         const array = name.split(' ');
         this.firstname = array[0];
         this.surname = array[1];
@@ -73,7 +73,12 @@ class Pet {
 }
 
 const bella = new Pet("Bella", "", 2, "Dog", "GS", "B&T", "08:00");
+const fidel = new Pet("Fidel", "", 4, "Dog", "Schipperke", "Black", "12:00")
 console.log(bella);
+console.log(fidel)
 bella.fullName = "Bella Crompton"
 console.log(bella);
 console.log(bella.fullName)
+console.log(bella.petInfo)
+console.log(fidel.petInfo)
+console.log(bella.feedPet())
