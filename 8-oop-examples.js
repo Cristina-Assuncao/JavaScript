@@ -66,19 +66,22 @@ class Pet {
     get fullName() {
         return `${this.firstname} ${this.surname}`
     }
-    feedPet (time) {
+    feedPet(time) {
         this.lastFed = time;
         return `Last feed updated to: ${this.lastFed} for ${this.firstname}`;
     }
 }
+const bella = new Pet("Bella", "", 2, "Dog", "GS", "B&T", "08:00"); // --> time is set everytime we log the function feedPet
+const fidel = new Pet("Fidel", "", 4, "Dog", "Schipperke", "Black", "time"); // --> this string "time" can be anything
 
-const bella = new Pet("Bella", "", 2, "Dog", "GS", "B&T", "08:00");
-const fidel = new Pet("Fidel", "", 4, "Dog", "Schipperke", "Black", "12:00")
 console.log(bella);
 console.log(fidel)
 bella.fullName = "Bella Crompton"
 console.log(bella);
 console.log(bella.fullName)
-console.log(bella.petInfo)
-console.log(fidel.petInfo)
-console.log(bella.feedPet())
+
+console.log(bella.petInfo);
+console.log(fidel.petInfo);
+
+console.log(bella.feedPet("10:00")); // --> here is "time" being set for 10:00
+console.log(fidel.feedPet("12:00"));

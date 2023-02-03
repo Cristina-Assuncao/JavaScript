@@ -2,51 +2,37 @@
 // Activity 1 + Activity 2 ?????
 
 class Rental {
-    constructor (storeName, address, phone, mail, movies, available) {
+    constructor (storeName, address, phone, mail, movies) {
         this.storeName = storeName;
         this.address = address;
         this.phone = phone;
         this.mail = mail;
         this.movies = movies;
-        this.available = available;
     }
     test () {
-        return `${this.storeName}, ${this.address}, ${this.phone}, ${this.mail}, ${this.movies}, ${this.available}`
+        return `${this.storeName}, ${this.address}, ${this.phone}, ${this.mail}, ${this.movies}`
     };
-    get allMovies () {                  
-        if (this.available === true) {
-           // for (let i = 0; i < this.movies.length; i++) { // cannot return all movies with the for loop, why ?????????
-            return `The film: ${this.movies}, is available for collection.`
-        }
-        else {
-            return `The film: ${this.movies}, is not on the shelf. Sorry!`
+    get allMovies () {
+        for (let i = 0; i < this.movies.length; i++) {
+            return `Our available films at your branch ${this.storeName} are: ${this.movies}`;
         }
     }
 };
 
-const film1 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Decision to Leave", true);
-const film2 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Wheel of Fortune and Fantasy", true);
-const film3 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Top Gun: Maverick", true);
-const film4 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Dune", false);
-const film5 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Remains of the Wind", true);
-const film6 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "The Banshees of Inisherin", true);
-const film7 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "The Souvenir: Part II", true);
-const film8 = new Rental ("Eden Films", "Alabama Street", 07845780355, "email_us@edenfilms.com", "Tár", false);
+const store1 = new Rental ("Eden Films 1", "42 Alabama Street", 07845780355, "email_us@edenfilms1.com", ["Decision to Leave", " Dune", " Remains of the Wind"]);
+const store2 = new Rental ("Eden Films 2", "3 Lambs Road", 07845788715, "email_us@edenfilms2.com", ["Wheel of Fortune and Fantasy", " The Banshees of Inisherin", " Tár"]);
+const store3 = new Rental ("Eden Films 3", "95 Holy Square", 07809780355, "email_us@edenfilms3.com", ["Top Gun: Maverick", " The Souvenir: Part II"]);
 
-console.log(film1)
-console.log(film1.test());
-console.log(film2.test());
-console.log(film3.test());
-console.log(film4.test());
-console.log(film5.test());
-console.log(film6.test());
-console.log(film7.test());
-console.log(film8.test());
+console.log(store1)
+console.log(store1.test());
+console.log(store2.test());
+console.log(store3.test());
 
 // Activity 2
 
-console.log(film1.allMovies) // could not return all movies available, only one by one with if/else statement
-console.log(film4.allMovies)
+console.log(store1.allMovies)
+console.log(store2.allMovies)
+console.log(store3.allMovies)
 
 // function to add --> setter ? or add new movie () --> ? const new Rental("") ?
 
@@ -57,7 +43,7 @@ console.log(film4.allMovies)
 
 
 // Stretch activity ???????????
-
+/*
 class Cyberpet {
     constructor (name, type, colour, eyes, fur, legs, food, drink) {
         this.type = type;
@@ -81,3 +67,4 @@ class Extra extends Cyberpet {
     giveExtra () {
         
     }
+    */
