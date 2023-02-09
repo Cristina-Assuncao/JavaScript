@@ -55,10 +55,10 @@ class Pet {
         this.colour = colour;
         this.lastFed = time;
     }
-    get petInfo () {  // getter
+    get petInfo() {  // getter
         return `${this.firstname} is a ${this.type}, ${this.age} year(s) old`;
     }
-    set fullName (name) { // setter
+    set fullName(name) { // setter
         const array = name.split(' ');
         this.firstname = array[0];
         this.surname = array[1];

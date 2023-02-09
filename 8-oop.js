@@ -2,37 +2,42 @@
 // Activity 1 + Activity 2 ?????
 
 class Rental {
-    constructor (storeName, address, phone, mail, movies) {
+    constructor(storeName, address, phone, mail, movies) {
         this.storeName = storeName;
         this.address = address;
         this.phone = phone;
         this.mail = mail;
         this.movies = movies;
     }
-    test () {
+    test() {
         return `${this.storeName}, ${this.address}, ${this.phone}, ${this.mail}, ${this.movies}`
     };
-    get allMovies () {
+    get allMovies() {
         for (let i = 0; i < this.movies.length; i++) {
-            return `Our available films at your branch ${this.storeName} are: ${this.movies}`;
+            return filmArray.push(this.movies)//`Our available films at your branch ${this.storeName} are: ${this.movies}`;
         }
-    }
-};
+    };
 
+};
+let filmArray = [];
 const store1 = new Rental ("Eden Films 1", "42 Alabama Street", 07845780355, "email_us@edenfilms1.com", ["Decision to Leave", " Dune", " Remains of the Wind"]);
 const store2 = new Rental ("Eden Films 2", "3 Lambs Road", 07845788715, "email_us@edenfilms2.com", ["Wheel of Fortune and Fantasy", " The Banshees of Inisherin", " Tár"]);
 const store3 = new Rental ("Eden Films 3", "95 Holy Square", 07809780355, "email_us@edenfilms3.com", ["Top Gun: Maverick", " The Souvenir: Part II"]);
 
+/*
 console.log(store1)
 console.log(store1.test());
 console.log(store2.test());
 console.log(store3.test());
+*/
 
 // Activity 2
 
-console.log(store1.allMovies)
-console.log(store2.allMovies)
-console.log(store3.allMovies)
+console.log(store1.allMovies);
+console.log(store2.allMovies);
+console.log(store3.allMovies);
+console.log(filmArray);
+
 
 // function to add --> setter ? or add new movie () --> ? const new Rental("") ?
 
