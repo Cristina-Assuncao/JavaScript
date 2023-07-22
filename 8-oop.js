@@ -19,6 +19,7 @@ class Rental {
     };
 
 };
+
 let filmArray = [];
 const store1 = new Rental ("Eden Films 1", "42 Alabama Street", 07845780355, "email_us@edenfilms1.com", ["Decision to Leave", " Dune", " Remains of the Wind"]);
 const store2 = new Rental ("Eden Films 2", "3 Lambs Road", 07845788715, "email_us@edenfilms2.com", ["Wheel of Fortune and Fantasy", " The Banshees of Inisherin", " Tár"]);
